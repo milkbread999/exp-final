@@ -1,6 +1,8 @@
 module.exports = {
-  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
-  darkMode: false, // or 'media' or 'class'
+  content: [
+    "./*.html", // Matches all HTML files in the root
+    "./**/*.html", // Matches HTML files in subdirectories
+  ],
   theme: {
     extend: {
       colors: {
@@ -10,19 +12,13 @@ module.exports = {
         EXdarkPurple: '#541C33',
         EXdarkerPurple: '#210b14',
         EXcoral: '#FF8A5E',
-        EXlightOrange:'#ffd5bd'
+        EXlightOrange: '#ffd5bd'
       },
-      
       fontFamily: {
-        heading: ['Funnel Display', 'sans-serif'], // Replace 'sans' with any custom name if preferred
-        body: ['Figtree', 'sans-serif'],
+        heading: ['Funnel Display', 'sans-serif'], // Custom heading font
+        body: ['Figtree', 'sans-serif'],           // Custom body font
       },
     },
   },
-  variants: {
-    extend: {},
-  },
   plugins: [],
-}
-
-// tailwind.config.js
+};
